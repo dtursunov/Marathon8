@@ -45,13 +45,12 @@ class ViewController: UIViewController, UITableViewDataSource, UIScrollViewDeleg
         tableView.delegate = self
         
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = UIColor.white
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.backgroundColor = .white
         tableView.tableHeaderView = tableHeaderView
 
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.shadowColor = .clear
+
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
         navigationController?.navigationBar.compactAppearance = navBarAppearance
